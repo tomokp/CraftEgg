@@ -1,8 +1,10 @@
 package net.tomokp.craftegg;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -11,6 +13,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.tomokp.craftegg.item.ModCreativeModeTabs;
+import net.tomokp.craftegg.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(CraftEgg.MOD_ID)
@@ -23,7 +27,11 @@ public class CraftEgg
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::commonSetup);
+
+        ModItems.ITEMS.register(modEventBus);
+//        BlockInit.BLOCKS.register(bus);
+        ModCreativeModeTabs.TABS.register(modEventBus);
+//        EntityInit.ENTITIES.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -34,7 +42,6 @@ public class CraftEgg
     {
 
     }
-
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
