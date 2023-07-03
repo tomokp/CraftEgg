@@ -11,6 +11,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.tomokp.craftegg.block.ModBlocks;
 import net.tomokp.craftegg.entity.ModEntities;
 import net.tomokp.craftegg.item.ModCreativeModeTabs;
 import net.tomokp.craftegg.item.ModItems;
@@ -33,6 +34,8 @@ public class CraftEgg
 //        EntityInit.ENTITIES.register(bus);
         ModEntities.register(modEventBus);
 
+        ModBlocks.register((modEventBus));
+
         MinecraftForge.EVENT_BUS.register(this);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -49,6 +52,7 @@ public class CraftEgg
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            //net.minecraft.world.item [shortcut to get to vanilla item code]
         }
     }
 }

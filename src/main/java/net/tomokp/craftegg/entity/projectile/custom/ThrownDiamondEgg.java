@@ -45,10 +45,9 @@ public class ThrownDiamondEgg extends ThrowableItemProjectile {
     protected void onHit(HitResult hitResult) {
         super.onHit(hitResult);
         if (!this.level().isClientSide) {
-            for(int j = 0; j < 25; ++j) {
+            for(int j = 0; j < 20; ++j) {
                 Chicken chicken = EntityType.CHICKEN.create(this.level());
                 if (chicken != null) {
-                    chicken.setAge(-24000);
                     chicken.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
                     this.level().addFreshEntity(chicken);
                 }

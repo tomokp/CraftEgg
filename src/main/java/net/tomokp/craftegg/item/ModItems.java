@@ -1,17 +1,19 @@
 package net.tomokp.craftegg.item;
-
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tomokp.craftegg.CraftEgg;
+import net.tomokp.craftegg.block.ModBlocks;
+import net.tomokp.craftegg.item.custom.DiamondEggItem;
 import net.tomokp.craftegg.item.custom.GoldenEggItem;
-
 import static net.tomokp.craftegg.item.ModCreativeModeTabs.addToTab;
 
 public class ModItems {
@@ -44,7 +46,11 @@ public class ModItems {
             () -> new GoldenEggItem(new Item.Properties()
             )));
     public static final RegistryObject<Item> DIAMOND_EGG = addToTab(ITEMS.register("diamond_egg",
-            () -> new GoldenEggItem(new Item.Properties()
+            () -> new DiamondEggItem(new Item.Properties()
+            )));
+    public static final RegistryObject<BlockItem> COMPRESSED_WOOL_ITEM = addToTab(ITEMS.register("compressed_wool",
+            () -> new BlockItem(ModBlocks.COMPRESSED_WOOL.get(), new Item.Properties()
+                    .rarity(Rarity.EPIC)
             )));
 
     public static void register(IEventBus eventBus) {
