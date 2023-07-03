@@ -11,6 +11,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.tomokp.craftegg.entity.ModEntities;
 import net.tomokp.craftegg.item.ModCreativeModeTabs;
 import net.tomokp.craftegg.item.ModItems;
 import org.slf4j.Logger;
@@ -30,6 +31,7 @@ public class CraftEgg
 //        BlockInit.BLOCKS.register(bus);
         ModCreativeModeTabs.TABS.register(modEventBus);
 //        EntityInit.ENTITIES.register(bus);
+        ModEntities.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 

@@ -6,10 +6,10 @@
       "item": "minecraft:diamond"
     },
     "B": {
-      "item": "craftegg:golden_beef"
+      "item": "craftegg:golden_steak"
     },
     "M": {
-      "item": "minecraft:beef"
+      "item": "minecraft:cooked_beef"
     }
   },
   "pattern": [
@@ -18,7 +18,7 @@
     "DBD"
   ],
   "result": {
-    "item": "craftegg:diamond_beef"
+    "item": "craftegg:diamond_steak"
   },
   "show_notification": true
 }

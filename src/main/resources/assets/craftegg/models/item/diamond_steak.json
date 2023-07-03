@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "craftegg:item/golden_beef"
+    "layer0": "craftegg:item/diamond_steak"
   }
 }

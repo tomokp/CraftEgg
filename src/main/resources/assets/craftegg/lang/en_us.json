@@ -1,5 +1,7 @@
 {
-  "item.craftegg.golden_beef": "Golden Beef",
-  "item.craftegg.diamond_beef": "Diamond Beef",
+  "item.craftegg.golden_steak": "Golden Steak",
+  "item.craftegg.diamond_steak": "Diamond Steak",
+  "item.craftegg.golden_egg": "Golden Egg",
+  "item.craftegg.golden_egg": "Diamond Egg",
   "itemGroup.craftegg_tab": "Craftegg"
 }

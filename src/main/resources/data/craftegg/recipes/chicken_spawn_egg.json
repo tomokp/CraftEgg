@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "G": {
-      "item": "craftegg:diamond_steak"
+      "item": "craftegg:diamond_egg"
     },
     "E": {
       "item": "minecraft:egg"
     },
     "L": {
-      "item": "craftegg:golden_steak"
+      "item": "craftegg:golden_egg"
     }
   },
   "pattern": [
@@ -18,7 +18,7 @@
     "GLG"
   ],
   "result": {
-    "item": "minecraft:cow_spawn_egg"
+    "item": "minecraft:chicken_spawn_egg"
   },
   "show_notification": true
 }

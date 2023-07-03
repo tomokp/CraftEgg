@@ -22,7 +22,7 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> CRAFTEGG_TAB = TABS.register("craftegg_tab",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.craftegg_tab"))
-                    .icon(ModItems.GOLDEN_BEEF.get()::getDefaultInstance)
+                    .icon(ModItems.GOLDEN_STEAK.get()::getDefaultInstance)
                     .displayItems((displayParams, output) ->
                         CRAFTEGG_TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get())))
                     .build()

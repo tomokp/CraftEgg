@@ -6,7 +6,7 @@
       "item": "minecraft:gold_ingot"
     },
     "B": {
-      "item": "minecraft:beef"
+      "item": "minecraft:cooked_beef"
     },
     "L": {
       "item": "minecraft:leather"
@@ -18,7 +18,7 @@
     "GLG"
   ],
   "result": {
-    "item": "craftegg:golden_beef"
+    "item": "craftegg:golden_steak"
   },
   "show_notification": true
 }
