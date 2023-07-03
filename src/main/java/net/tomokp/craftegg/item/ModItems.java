@@ -16,18 +16,26 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CraftEgg.MOD_ID);
 
+    //cow
     public static final RegistryObject<Item> GOLDEN_BEEF = addToTab(ITEMS.register("golden_beef",
             () -> new Item(new Item.Properties()
                     .food(new FoodProperties.Builder()
                             .nutrition(20)
                             .saturationMod(20f)
-                            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 600, 4), 1f)
-                            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 50), 1f)
+                            .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 1200, 1), 1f)
                             .build()
                     )
             )));
     public static final RegistryObject<Item> DIAMOND_BEEF = addToTab(ITEMS.register("diamond_beef",
-            () -> new Item(new Item.Properties())));
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(80)
+                            .saturationMod(80f)
+                            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 600, 2), 1f)
+                            .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 1200, 4), 1f)
+                            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 2), 1f)
+                            .build()
+                    ))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

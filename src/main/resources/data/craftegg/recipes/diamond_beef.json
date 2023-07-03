@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "craftegg:golden_beef"
+    },
+    "M": {
+      "item": "minecraft:beef"
+    }
+  },
+  "pattern": [
+    "DBD",
+    "BMB",
+    "DBD"
+  ],
+  "result": {
+    "item": "craftegg:diamond_beef"
+  },
+  "show_notification": true
+}

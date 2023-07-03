@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "craftegg:diamond_beef"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "L": {
+      "item": "craftegg:golden_beef"
+    }
+  },
+  "pattern": [
+    "GLG",
+    "LEL",
+    "GLG"
+  ],
+  "result": {
+    "item": "minecraft:cow_spawn_egg"
+  },
+  "show_notification": true
+}
