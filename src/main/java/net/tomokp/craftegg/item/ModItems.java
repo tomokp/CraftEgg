@@ -52,6 +52,10 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.COMPRESSED_WOOL.get(), new Item.Properties()
                     .rarity(Rarity.EPIC)
             )));
+    public static final RegistryObject<BlockItem> WOVEN_COMPRESSED_WOOL_ITEM = addToTab(ITEMS.register("woven_compressed_wool",
+            () -> new BlockItem(ModBlocks.WOVEN_COMPRESSED_WOOL.get(), new Item.Properties()
+                    .rarity(Rarity.EPIC)
+            )));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

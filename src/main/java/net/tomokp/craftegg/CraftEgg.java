@@ -53,6 +53,7 @@ public class CraftEgg
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             //net.minecraft.world.item [shortcut to get to vanilla item code]
+            //net.minecraft.world.level.block.SlimeBlock
         }
     }
 }
